@@ -1,0 +1,9 @@
+def execute_live_trade(self, token_id, price, size, side):
+    order_args = OrderArgs(
+        token_id=token_id,
+        price=price,
+        size=size,
+        side=side # "BUY" atau "SELL"
+    )
+    signed_order = self.poly.create_order(order_args)
+    return self.poly.post_order(signed_order)
