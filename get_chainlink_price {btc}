@@ -1,0 +1,3 @@
+def get_chainlink_live(self):
+    url = "https://cryptocompare.com"
+    return requests.get(url).json()['USD']
