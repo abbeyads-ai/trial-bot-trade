@@ -1,0 +1,3 @@
+def get_real_orderbook(self, token_id):
+    # Mengambil snapshot orderbook dari Polymarket CLOB
+    return self.poly.get_order_book(token_id)
