@@ -1,0 +1,6 @@
+def fetch_live_5m_market(self):
+    # Mencari market Bitcoin Up/Down yang sedang aktif
+    url = "https://polymarket.com"
+    resp = requests.get(url).json()
+    # Ambil market pertama yang paling mendekati waktu tutup
+    return resp[0]
